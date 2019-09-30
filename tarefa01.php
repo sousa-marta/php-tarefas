@@ -45,8 +45,8 @@
     echo $dois." ".$um; */
 
     
-    /*  EXERCÍCIO 03
-    $variable01 = true;
+    // EXERCÍCIO 03
+   /*  $variable01 = true;
     $variable02 = false;
     $variable03 = 0;
     $variable04 = 1;
@@ -57,7 +57,7 @@
     $variable09 = 'false';
     $variable10 = null;
 
-    $meuDado = &$variable01;
+    $meuDado = $variable01;
 
     function tipoDado($varN)
     {
@@ -70,13 +70,14 @@
             echo 'o valor ' . $varN . ' é falso.';
         }
     }
-    tipoDado($meuDado​); */
+
+    tipoDado($meuDado);  */
 
     /* EXERCÍCIO 04
     $animais = ["cachorro","gato","cavalo","porco","arara"];
     var_dump($animais);
     echo "<br>";
-    $animais[]="crocodilo"; //como adiciona mais de um elemento numa array?
+    $animais[]="crocodilo";
     $animais[]="peixe"; 
     var_dump($animais);
     echo "<br>";
@@ -86,7 +87,7 @@
     $animais[0]="macaco";
     echo "Eu gosto de animais: $animais[0], $animais[1], $animais[2], $animais[3], $animais[4], $animais[5], $animais[6]...<br>";
     
-    $animais[100]="pinguim";
+    $animais[99]="pinguim";
     var_dump($animais);
 
     $animais[16]="vaca";
@@ -95,13 +96,13 @@
     echo "Animais: $animais[0], $animais[1], $animais[2], $animais[3], $animais[4], $animais[5], $animais[6], $animais[16], $animais[100]...<br>"; */
    
     
-    // EXERCÍCIO 05 - array associativo
+    // // EXERCÍCIO 05 - array associativo
     $carro["marca"]= 0;
     $carro["modelo"]= 0;
     
     var_dump($carro);
 
 
-    $usuarioDois = ["nome"=>"marta","sobrenome"=>"Sousa","idade"=>30];
+    // $usuarioDois = ["nome"=>"marta","sobrenome"=>"Sousa","idade"=>30];
 
    ?>
