@@ -1,6 +1,6 @@
 <?php 
-   /* EXERCÍCIO 01.
-    $numeroInteiro = 30;
+//EXERCÍCIO 01.
+/*  $numeroInteiro = 30;
     echo $numeroInteiro;
     var_dump ($numeroInteiro);
 
@@ -37,16 +37,16 @@
     var_dump ($numeroInteiro);
  */
 
-    /* EXERCÍCIO 02
-    $um = "três";
+//EXERCÍCIO 02
+/*  $um = "três";
     $dois = "pratos";
 
     echo $um." ".$dois;
     echo $dois." ".$um; */
 
     
-    // EXERCÍCIO 03
-   /*  $variable01 = true;
+// EXERCÍCIO 03
+/*  $variable01 = true;
     $variable02 = false;
     $variable03 = 0;
     $variable04 = 1;
@@ -56,8 +56,6 @@
     $variable08 = "true";
     $variable09 = 'false';
     $variable10 = null;
-
-    $meuDado = $variable01;
 
     function tipoDado($varN)
     {
@@ -71,10 +69,29 @@
         }
     }
 
-    tipoDado($meuDado);  */
+    tipoDado($variable01);
+    echo "<br>";
+    tipoDado($variable02);
+    echo "<br>";
+    tipoDado($variable03);
+    echo "<br>";
+    tipoDado($variable04);
+    echo "<br>";
+    tipoDado($variable05);
+    echo "<br>";
+    tipoDado($variable06);
+    echo "<br>";
+    tipoDado($variable07);
+    echo "<br>";
+    tipoDado($variable08);
+    echo "<br>";
+    tipoDado($variable09);
+    echo "<br>";
+    tipoDado($variable10);
+    echo "<br>"; */
 
-    /* EXERCÍCIO 04
-    $animais = ["cachorro","gato","cavalo","porco","arara"];
+//EXERCÍCIO 04
+/*  $animais = ["cachorro","gato","cavalo","porco","arara"];
     var_dump($animais);
     echo "<br>";
     $animais[]="crocodilo";
@@ -87,22 +104,74 @@
     $animais[0]="macaco";
     echo "Eu gosto de animais: $animais[0], $animais[1], $animais[2], $animais[3], $animais[4], $animais[5], $animais[6]...<br>";
     
-    $animais[99]="pinguim";
+    $animais[100]="pinguim";
     var_dump($animais);
 
     $animais[16]="vaca";
     var_dump($animais);
     echo "<br>";
-    echo "Animais: $animais[0], $animais[1], $animais[2], $animais[3], $animais[4], $animais[5], $animais[6], $animais[16], $animais[100]...<br>"; */
+    echo "Animais: $animais[0], $animais[1], $animais[2], $animais[3], $animais[4], $animais[5], $animais[6], $animais[16], $animais[100]...<br>"; */ 
    
     
-    // // EXERCÍCIO 05 - array associativo
-    $carro["marca"]= 0;
-    $carro["modelo"]= 0;
-    
+// EXERCÍCIO 05 - array associativo
+/*  $carro = ["marca" => "ford", "modelo" => "fiesta", "cor" => "vermelho", "ano" => "2015", "placa" => "abc1234"];
     var_dump($carro);
+    echo "<br>";
+    
+    //adicionando nome na posição [0]:
+    $carro[0] = "Marta";
+    var_dump($carro);
+    echo "<br>";
+    //adicionou no fim da array com posição [0];
 
+    //adicionando na posição [14]:
+    $carros[14]= "Porto Seguro";
+    var_dump($carro);
+    //não apareceu na array; */
 
-    // $usuarioDois = ["nome"=>"marta","sobrenome"=>"Sousa","idade"=>30];
+// EXERCÍCIO 06
+/*  $inteiro = 10;
+    $decimal = 6.55;
+
+    echo $inteiro + $decimal;
+    echo "<br>";
+
+    echo $inteiro - $decimal;
+    echo "<br>";
+
+    echo $inteiro / $decimal;
+    echo "<br>";
+    
+    echo $inteiro * $decimal;
+    echo "<br>";
+
+    $resto = $inteiro % $decimal;
+    echo $resto ;
+    echo "<br>";
+    
+    echo $inteiro + 1;
+    echo "<br>";
+    echo $decimal + 1;
+    echo "<br>";
+
+    echo ($inteiro +5 +$decimal -0.6);
+    echo "<br>";
+
+    $resultado = ($inteiro*2 + $decimal)/($inteiro/2);
+    echo $resultado; */
+
+// EXERCÍCIO 07
+/*     $ola = "Olá";
+    $mundo = "mundo";
+
+    $frase = $ola." ".$mundo;
+    echo $frase;
+    echo "<br>";
+    $fraseAlt = "$ola $mundo";
+    echo "$fraseAlt <br>";
+    // ambas formas são possíveis;
+
+    $fraseMaior = $frase." PHP é o máximo!";
+    echo $fraseMaior; */
 
    ?>
