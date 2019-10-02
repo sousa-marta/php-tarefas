@@ -84,6 +84,53 @@ if ($i == 1 ) {
 
 //EXERCÍCIO 08
 
+$numero = 15;
+
+$numero%2 == 0 ? echo "O número é par" : echo "O número é impar";
+
+
+//EXERCÍCIO 09
+/* 
+$i = mt_rand (1,5);
+
+switch ($i) {
+    case 1:
+        echo "$i é igual à 1";
+        break;
+    case 2:
+        echo "$i é igual à 2";
+        break;
+    case 3:
+        echo "$i é igual à 3";
+        break;
+    case 4:
+        echo "$i é igual à 4";
+        break;
+    default:
+        echo "$i é igual à 5";
+        break;
+}
+ */
+
+//EXERCÍCIO 10
+/* 
+$i = mt_rand (1,5);
+
+switch ($i) {
+    case 1:
+        echo "$i é igual à 1";
+        break;
+    case 2:
+        echo "$i é igual à 2";
+        break;
+    default:
+        echo "$i não é igual à 1 ou 2";
+        break;
+}
+ */
+
+//EXERCÍCIO 11
+
 
 
 ?>
