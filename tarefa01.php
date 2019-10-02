@@ -125,9 +125,9 @@
     //adicionou no fim da array com posição [0];
 
     //adicionando na posição [14]:
-    $carros[14]= "Porto Seguro";
+    $carro[14]= "Porto Seguro";
     var_dump($carro);
-    //não apareceu na array; */
+    //adicionou no fim da array com posição [14]; */
 
 // EXERCÍCIO 06
 /*  $inteiro = 10;
