@@ -83,11 +83,11 @@ if ($i == 1 ) {
  */
 
 //EXERCÍCIO 08
+/* 
+$numero = mt_rand (1,100);
 
-$numero = 15;
-
-$numero%2 == 0 ? echo "O número é par" : echo "O número é impar";
-
+echo $numero%2 == 0 ? "$numero é um número é par" : "$numero é um número é impar";
+ */
 
 //EXERCÍCIO 09
 /* 
@@ -130,7 +130,16 @@ switch ($i) {
  */
 
 //EXERCÍCIO 11
+/* 
+$x = mt_rand(1,10);
+$y = mt_rand(1,10);
 
-
-
+if ($x > $y) {
+    echo "$x é maior que $y";
+} elseif ($x < $y) {
+    echo "$y é maior que $x";
+} else {
+    echo "os números são iguais"; 
+}
+ */
 ?>
