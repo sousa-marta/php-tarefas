@@ -1,4 +1,5 @@
 <?php 
+
 //EXERCÍCIO 01
 /*  $numeroInteiro = 30;
     echo $numeroInteiro;
