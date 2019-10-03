@@ -18,7 +18,7 @@ for ($i=0; $i <= $aleatorio; $i++) {
 
 //EXERCÍCIO 03 - tabuada do 2:
 /* 
-echo "Tabuáda do 2: <br>";
+echo "Tabuada do 2: <br>";
 
 for ($i=0; $i <= 10; $i++) { 
     $produto = 2*$i;
@@ -28,5 +28,18 @@ for ($i=0; $i <= 10; $i++) {
 
 //EXERCÍCIO 04
 
+$caras = 0;
+$totalJogadas = 0;
+while ($caras <= 5) {
+    $caraCoroa = mt_rand (0,1);
+    if ($caraCoroa == 1 ) {
+    $caras++;    
+    }
+    $totalJogadas++;
+}
+echo "Foram necessárias $totalJogadas jogadas para tirar 5 vezes cara";
+
+// 1 - representa cara;
 
 ?>
+
