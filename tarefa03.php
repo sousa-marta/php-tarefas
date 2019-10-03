@@ -82,6 +82,61 @@ do {
  */
 
 //EXERCÍCIO 07
+/* 
+//definindo uma array com 10 números aleatórios:
+$numeros = [];
+for($i=0; $i < 10; $i++) { 
+    $numeros[] = mt_rand(0,10);
+}
+
+var_dump($numeros);
+
+echo "<br><br> a - Resolvendo com FOR: <br>";
+for ($i=0; $i < count($numeros); $i++) { 
+    if ($numeros[$i] != 5) {
+        echo $numeros[$i]." ";
+    } else {
+        echo "<br> Encontramos o cinco!";
+        break;
+    }
+}
+
+echo "<br><br> b - Resolvendo com WHILE: <br>";
+$i = 0;
+while ($i < count($numeros)) {
+    if ($numeros[$i] != 5) {
+        echo $numeros[$i]." ";
+        $i++;
+    } else {
+        echo "<br> Encontramos o cinco!";
+        break;
+    }
+} 
+
+echo "<br><br> c - Resolvendo com DO/WHILE: <br>";
+$i=0;
+do {
+    if ($numeros[$i] != 5) {
+        echo $numeros[$i]." ";
+        $i++;
+    } else {
+        echo "<br> Encontramos o cinco!";
+        break;
+    }
+} while ($i < count($numeros));
+*/
+
+//EXERCÍCIO 08
+
+range()
+
+<br><br><br><br>
+ Utilizando a função “Range”(http://php.net/manual/en/function.range.php),
+ criar um intervalo de letras (de a até n), imprimir uma frase que diga “Na
+ posição [index], está o valor [value]”.
+ Onde [value] será substituído por cada valor do array e [index] representa o
+ índice.
+ 
 
 
 ?>
