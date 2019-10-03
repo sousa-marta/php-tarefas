@@ -27,7 +27,7 @@ for ($i=0; $i <= 10; $i++) {
  */
 
 //EXERCÍCIO 04
-
+/* 
 $caras = 0;
 $totalJogadas = 0;
 while ($caras <= 5) {
@@ -38,8 +38,50 @@ while ($caras <= 5) {
     $totalJogadas++;
 }
 echo "Foram necessárias $totalJogadas jogadas para tirar 5 vezes cara";
-
 // 1 - representa cara;
+ */
+
+//EXERCÍCIO 05
+/* 
+$totalJogadas = 0;
+do {
+    $caraCoroa = mt_rand (0,1);
+    $totalJogadas++;
+} while ($caraCoroa == 1);
+echo "Foram necessários $totalJogadas jogadas para tirar cara."
+*/
+
+//EXERCÍCIO 06
+/* 
+$letras = ["a", "b", "c", "d", "e"];
+
+echo "a - Resolvendo com FOR: <br>";
+for ($i=0; $i < count($letras); $i++) { 
+    echo $letras[$i]." ";
+}
+
+echo "<br><br> b - Resolvendo com FOREACH: <br>";
+foreach ($letras as $letra) {
+    echo $letra." ";
+}
+//jeito mais simples de imprimir todas as posições da array.
+
+echo "<br><br> c - Resolvendo com WHILE: <br>";
+$i = 0;
+while ($i < count($letras)) {
+    echo $letras[$i]." ";
+    $i++;
+}
+
+echo "<br><br> d - Resolvendo com DO/WHILE: <br>";
+$i=0;
+do {
+    echo $letras[$i]." ";
+    $i++;
+} while ($i < count($letras));
+ */
+
+//EXERCÍCIO 07
+
 
 ?>
-
