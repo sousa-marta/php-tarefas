@@ -131,9 +131,46 @@ do {
 foreach (range('a','n') as $index => $value) {
     echo "Na posição $index, está o valor $value"."<br>";
 }
+*/
+
+//EXERCÍCIO 09
+/* 
+$mascotes = ["animal"=>"cachorro", "idade"=>5, "altura"=>0.6, "nome"=>"Sonic"];
+
+foreach ($mascotes as $key => $mascote) {
+    echo "$key : $mascote"."<br>";
+}
  */
+
+//EXERCÍCIO 11
+/* 
+$ceu = ["Itália"=>"Roma", "Luxemburgo"=>"Luxemburgo",
+"Bélgica"=> "Bruxelas", "Dinamarca"=>"Copenhagen",
+"Finlândia"=>"Helsinki", "França" => "Paris",
+"Eslováquia"=>"Bratislava", "Eslovênia"=>"Liubliana",
+"Alemanha" => "Berlim", "Grécia" => "Atenas",
+"Irlanda"=>"Dublin", "Holanda"=>"Amsterdã",
+"Portugal"=>"Lisboa", "Espanha"=>"Madri",
+"Suécia"=>"Estocolmo", "Reino Unido"=>"Londres",
+"Chipre"=>"Nicósia", "Lituânia"=>"Vilnius", "República
+Tcheca"=>"Praga", "Estônia"=>"Tallinn",
+"Hungria"=>"Budapeste","Letônia"=>"Riga", "Malta"=>"Valletta",
+"Austria" => "Viena", "Polônia"=>"Varsóvia"];
+
+ksort ($ceu);
+
+foreach ($ceu as $pais => $capital) {
+    echo "A capital da $pais é $capital"."<br>";
+}
+ */
+
+//EXERCÍCIO 12
+
 
 
 
 
 ?>
+
+<br><br>
+Criar um script que mostre o nome da capital e o país a partir da variável ​ $ceu​ .
