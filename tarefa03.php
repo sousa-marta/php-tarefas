@@ -165,12 +165,44 @@ foreach ($ceu as $pais => $capital) {
  */
 
 //EXERCÍCIO 12
+/* 
+$ceu = [
+    "Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé"],
+    "Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"],
+    "Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"],
+    "França" => ["Paris", "Nantes", "Lyon"],
+    "Itália" => ["Roma", "Milão", "Veneza"],
+    "Alemanha" => ["Munique", "Berlim", "Frankfurt"]
+    ];
 
+foreach ($ceu as $pais => $cidades) {
+    echo "As cidades do país $pais são:<br>";
+    foreach ($cidades as $key => $cidade) {
+        echo "- ".$cidade."<br>";
+    }
+}
+ */
 
+//EXERCÍCIO 13
+
+$argentina = [naAmerica => true,"cidades" => ["Buenos Aires", "Córdoba", "Santa Fé"]];
+$brasil = [naAmerica => true,"cidades" => ["Brasília", "Rio de Janeiro", "São Paulo"]];
+$colombia = [naAmerica => true,"cidades" => ["Cartagena", "Bogotá", "Barranquilla"]];
+$franca = [naAmerica => false,"cidades" => ["Paris", "Nantes", "Lyon"]];
+$italia = [naAmerica => false,"cidades" => ["Roma", "Milão", "Veneza"]];
+$alemanha = [naAmerica => false,"cidades" => ["Munique", "Berlim", "Frankfurt"]];
 
 
 
 ?>
 
 <br><br>
-Criar um script que mostre o nome da capital e o país a partir da variável ​ $ceu​ .
+A partir do exercício anterior:
+● Adicionar a cada país um dado extra, além das cidades, chamado
+naAmerica​ . Esse dado deve receber o valor ​ true ​ ou ​ false (caso exista na
+américa ou não)​ .
+● Imprimir assim como no exercício 12 porém apenas deverão aparecer na
+tela os países que estejam na américa.
+IMPORTANTE​ : Para que isso funcione bem, os alunos devem criar um array
+associativo ​ para cada país​ , de forma que cada país tenha os dados de suas
+cidades e naAmerica (se estão ou não).
