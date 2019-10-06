@@ -11,16 +11,16 @@
     </body>
 </html>
 
+
 <?php 
+    echo "<h4>"."exercício 1b"."</h4>";
     var_dump($_GET);
-    foreach ($_GET as $nome => $email) {
-        echo "O nome é $nome e o e-mail é $email";
+    echo "<br>".$_GET['nome']."<br>";
+
+    echo "<h4>"."exercício 1c"."</h4>";
+    foreach ($_GET as $key => $value) {
+        echo "$key : $value <br>";
     }
 ?>
 
 <br><br><br>
-b. Modificar ​ imprimir.php​ para que imprima algum valor específico
-de ​ $_GET​ .
-c. Modificar ​ imprimir.php​ para que imprima todos os valores
-utilizando um foreach.
-?qualquer=coisa
