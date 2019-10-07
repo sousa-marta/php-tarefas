@@ -13,11 +13,11 @@
 
 
 <?php 
-    echo "<h4>"."exercício 1b"."</h4>";
+    echo "<h4>"."exercício 2b"."</h4>";
     var_dump($_GET);
     echo "<br>".$_GET['nome']."<br>";
 
-    echo "<h4>"."exercício 1c"."</h4>";
+    echo "<h4>"."exercício 2c"."</h4>";
     foreach ($_GET as $key => $value) {
         echo "$key : $value <br>";
     }

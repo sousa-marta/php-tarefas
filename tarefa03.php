@@ -194,6 +194,24 @@ $alemanha = [naAmerica => false,"cidades" => ["Munique", "Berlim", "Frankfurt"]]
 
 
 
+
+
+$ceu = [
+    "Argentina" => ["naAmerica" => true, "cidades"=>["Buenos Aires", "Córdoba", "Santa Fé"]],
+    "Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"],
+    "Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"],
+    "França" => ["Paris", "Nantes", "Lyon"],
+    "Itália" => ["Roma", "Milão", "Veneza"],
+    "Alemanha" => ["Munique", "Berlim", "Frankfurt"]
+    ];
+
+foreach ($ceu as $pais => $cidades) {
+    echo "As cidades do país $pais são:<br>";
+    foreach ($cidades as $key => $cidade) {
+        echo "- ".$cidade."<br>";
+    }
+}
+
 ?>
 
 <br><br>
