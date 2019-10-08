@@ -82,7 +82,7 @@ do {
  */
 
 //EXERCÍCIO 07
-/* 
+ 
 //definindo uma array com 10 números aleatórios:
 $numeros = [];
 for($i=0; $i < 10; $i++) { 
