@@ -63,14 +63,14 @@
                 Feminino <input type="radio" name="genero" value="feminino"><br>
                 Masculino <input type="radio" name="genero" value="masculino"><br>
                 Prefiro não declarar <input type="radio" name="genero" value="naoInformado"><br><br>
-                Dormiu bem ontem? Dê uma nota:
-                <select name="dormiu">      <!-- tentar colocar um for aqui depois -->
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
+            Dormiu bem ontem? Dê uma nota:
+                <select name="dormiu">
+                    <?php 
+                    $notas = range(0,10); //cria uma array de 0 à 10.
+                    foreach ($notas as $nota) { ?>
+                        <option value="<?php $nota ?>"><?php echo $nota; ?></option>
+                    <?php } ?>            
+                </select><br><br>
             Aceita Termos e Condições?<br>
                 Sim <input type="checkbox" name="termos" value="sim"><br>
                 Não <input type="checkbox" name="termos" value="nao"><br>
