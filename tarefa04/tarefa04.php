@@ -1,5 +1,3 @@
-<!-- Dúvida no Exercício 4, no item do checkbox, no name. -->
-
 <!-- Exercício 01 e 02: -->
 <!-- 
 <!DOCTYPE html>
@@ -67,9 +65,11 @@
                 <select name="dormiu">
                     <?php 
                     $notas = range(0,10); //cria uma array de 0 à 10.
+                    var_dump ($notas);
                     foreach ($notas as $nota) { ?>
-                        <option value="<?php $nota ?>"><?php echo $nota; ?></option>
-                    <?php } ?>            
+                        <option value="<?php $nota; ?>"><?php echo $nota; ?></option>
+                    <?php } ?>       
+                         
                 </select><br><br>
             Aceita Termos e Condições?<br>
                 Sim <input type="checkbox" name="termos" value="sim"><br>
