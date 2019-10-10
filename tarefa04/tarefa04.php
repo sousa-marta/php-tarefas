@@ -67,7 +67,8 @@
                     $notas = range(0,10); //cria uma array de 0 à 10.
                     var_dump ($notas);
                     foreach ($notas as $nota) { ?>
-                        <option value="<?=$nota?>"><?php echo $nota; ?></option>
+                        <option value="<?=$nota?>"><?=$nota?></option> 
+                        <!-- com sintaxe curta pra "echo tralalala" -->
                     <?php } ?>       
                 </select><br><br>
             Aceita Termos e Condições?<br>
