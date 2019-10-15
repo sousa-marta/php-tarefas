@@ -1,14 +1,43 @@
-<!-- TAREFAS ARQUIVOS -->
+<!-- TAREFAS JSON -->
+<?php 
 
+// EXERCÍCIO 1A:
+$a = ["a" => 1, "b" => 2, "c" => "Eu <3 JSON"];
+
+/* foreach ($a as $key => $value) {
+    echo "$key:$value<br>";
+} */
+
+// EXERCÍCIO 1B e 1C:
+$a = json_encode($a);
+//echo $a;  //enconde transforma em uma string, não precisa usar mais o foreach para imprimir os valores.
+
+// EXERCÍCIO 1D e 1E:
+/* $b = json_decode($a);//decoda no formato objeto
+echo $b; */
+
+$b = json_decode($a,true);//decoda no formato array
+/* foreach ($b as $key => $value) {
+    echo "$key:$value<br>";
+} */
+
+// EXERCÍCIO 1F:
+// echo $b["c"];
+
+?>
+
+
+<!-- TAREFAS ARQUIVOS -->
 <?php
 
 // EXERCÍCIO 3A E B:
+/* 
 $nomeArquivo = 'texto.txt';
 function verificaArquivo($arquivo) {
     $arquivoAberto = fopen($arquivo,'a+');
     fwrite($arquivoAberto, 'Olá, mundo!');
     fclose($arquivoAberto);
-}
+} */
 
 // verificaArquivo($nomeArquivo);
 
@@ -38,12 +67,13 @@ fclose($arquivo);
 $arquivo = file_get_contents('texto2.txt');
 $arquivo = ' Este texto sobrescreve o anterior?';
 file_put_contents('texto2.txt', $arquivo); */
-/* Assim sobrescreve o texto anterior. */
+//Assim sobrescreve o texto anterior. 
 
+/* 
 $arquivo = file_get_contents('texto2.txt');
 $arquivo .= ' Não, com o "." não sobrescreve!';
 file_put_contents('texto2.txt', $arquivo);
-
+ */
 
 ?>
 
