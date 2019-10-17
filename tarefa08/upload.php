@@ -3,20 +3,25 @@
 
 //Dúvida: a pasta uploads já tinha que ter sido criada?
 
-var_dump($_FILES);
-// var_dump($_POST);
+// var_dump($_FILES);
 
-// if($_FILES["img"]["error"] === UPLOAD_ERR_OK){
 if($_FILES){
 	$imgName = $_FILES["sentFile"]["name"];
 	$tmpLocation = $_FILES["sentFile"]["tmp_name"];
 	$saveTo = dirname(__FILE__)."/uploads/".$imgName;
-	
+
+	// Validação para saber se arquivo já existe. Se já existir, não salvar novamente:
 	if(file_exists($saveTo)) {
 		echo "Já foi feito o upload desse arquivo";
 	}else {
 		$moving = move_uploaded_file($tmpLocation,$saveTo);
-		echo "O upload do seu arquivo foi realizado com sucesso! :D";
+
+		//Verificação se o arquivo conseguiu ser movido para a pasta destino final:
+		if($moving) {
+			echo "O upload do seu arquivo foi realizado com sucesso! :D";
+		}else {
+			echo "Não foi possível salvar o arquivo :(";
+		}
 	}
 }
 
