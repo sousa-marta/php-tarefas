@@ -2,23 +2,21 @@
 // EXERCÍCIO 1A:
 
 //Dúvida: a pasta uploads já tinha que ter sido criada?
-//Continua não funcionando
 
-if($_POST){
-	$imgName = $_FILES['sentFile']['name'];
-	$tmpLocation = $_FILES['sentFile']['tmp_name'];
-	$saveTo = 'uploads/'.$imgName;
+var_dump($_FILES);
+// var_dump($_POST);
+
+// if($_FILES["img"]["error"] === UPLOAD_ERR_OK){
+if($_FILES){
+	$imgName = $_FILES["sentFile"]["name"];
+	$tmpLocation = $_FILES["sentFile"]["tmp_name"];
+	$saveTo = dirname(__FILE__)."/uploads/".$imgName;
 	
-	
-	// var_dump($_FILES);
-	var_dump($_POST);
-	
-	$ok = move_uploaded_file($tmpLocation,$saveTo);
-	echo "Deu certo!";
-	
-	if($_FILES["sentFile"]["error"] == UPLOAD_ERR_OK) {
+	if(file_exists($saveTo)) {
+		echo "Já foi feito o upload desse arquivo";
 	}else {
-		echo "Já há um arquivo com esse nome, favor enviar outro arquivo.";
+		$moving = move_uploaded_file($tmpLocation,$saveTo);
+		echo "O upload do seu arquivo foi realizado com sucesso! :D";
 	}
 }
 
@@ -41,3 +39,16 @@ if($_POST){
 </html>
 
 <br><br><br>
+
+
+<!-- // Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+} -->
