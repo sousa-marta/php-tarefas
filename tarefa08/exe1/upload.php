@@ -8,11 +8,12 @@
 if($_FILES){
 	$imgName = $_FILES["sentFile"]["name"];
 	$tmpLocation = $_FILES["sentFile"]["tmp_name"];
-	$saveTo = dirname(__FILE__)."/uploads/".$imgName;
+	// $saveTo = dirname(__FILE__)."/uploads/".$imgName;
+	$saveTo = __DIR__."/uploads/".$imgName;
 
 	// Validação para saber se arquivo já existe. Se já existir, não salvar novamente:
 	if(file_exists($saveTo)) {
-		echo "Já foi feito o upload desse arquivo";
+		echo "Já foi feito o upload desse arquivo. Por favor, escolha outro arquivo.";
 	}else {
 		$moving = move_uploaded_file($tmpLocation,$saveTo);
 

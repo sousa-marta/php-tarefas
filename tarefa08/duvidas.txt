@@ -1,0 +1,1 @@
+1. Exercício 1b - download. $FILES é super global? Não consegui acessar do outro arquivo na pasta Usar json?
