@@ -1,3 +1,16 @@
-4. Criar um arquivo ​ perfil.php​ que ​ exibe e permite ​ editar as informações de cada um dos usuários. Para isso, é
-necessário acessar por meio da URL ​ perfil.php?id=8​ (que neste caso é um exemplo onde pedimos para mostrar informações do usuário com o id 8)
-5. Adicionar a ​ perfil.php​ as possibilidades baixar os arquivos Imagem de perfil e CV
+
+permite ​ editar e excluir
+
+<?php
+
+$users = json_decode(file_get_contents(__DIR__."/usuarios.json"),true); 
+
+$userProfile = $_GET[$id];
+
+var_dump($userProfile);
+
+
+
+
+
+?>

@@ -7,9 +7,17 @@
 
     //Se já existir arquivo .json:
     if(file_exists($fileName)){
+   
+      //Criar restrição para se não houver texto dentro do file_get_contents:
       $users = json_decode(file_get_contents($fileName),true);
 
-      $users[] = ["userName" => $name, "userAge" => $age, "userImage" => $img, "userCV" => $cv];
+      //Colocando ID para marcação do cadastro usuário:
+      //Pegando último ID:
+      $idLastPosition = count($users)-1; 
+      //Somando um valor ao último ID:
+      $idLast = $users[$idLastPosition]["id"]+1;
+
+      $users[] = ["id" => $idLast, "userName" => $name, "userAge" => $age, "userImage" => $img, "userCV" => $cv];
 
       $json = json_encode($users);
 
@@ -23,8 +31,10 @@
 
     //Se ainda não existir arquivo .json, cria:
     }else {
+      $idLast = 1;
+
       $users = [];
-      $users[] = ["userName" => $name, "userAge" => $age, "userImage" => $img, "userCV" => $cv];
+      $users[] = ["id" => $idLast, "userName" => $name, "userAge" => $age, "userImage" => $img, "userCV" => $cv];
 
       $json = json_encode($users);
 
@@ -35,7 +45,6 @@
       }else {
         return "Houve um problema ao adicionar o usuário";
       }
-
     }
   }
 
@@ -60,7 +69,6 @@
     //Imprime na tela se deu certo ou não (imprime os returns de dentro da função)
     echo cadastrarUsuario($_POST["userName"],$_POST["userAge"],$imgFinalPath,$cvFinalPath);
   }
-  
 
 ?>
 
@@ -110,17 +118,21 @@
         <?php if($users){ ?>
           <table>
             <tr>
+              <th>ID</th>
               <th>Nome</th>
               <th>Idade</th>
               <th>Imagem</th>
               <th>CV</th>
+              <th></th>
             </tr>
             <?php foreach($users as $row){ ?>
             <tr>
+              <td><?= $row["id"]; ?></td>
               <td><?= $row["userName"]; ?></td>
               <td><?= $row["userAge"]; ?></td>
               <td><?= $row["userImage"]; ?></td>
               <td><?= $row["userCV"]; ?></td>
+              <td><a href="perfil.php?<?php $row["id"]; ?> ">Ver Perfil</a></td>
             </tr>
             <?php } ?>
           </table> 
