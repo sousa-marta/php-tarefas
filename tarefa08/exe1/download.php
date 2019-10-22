@@ -1,6 +1,3 @@
-b. download.php deve mostrar um link que ao clicar faça download
-do arquivo enviado anteriormente pelo usuário DICA: atributo download da tag <a>.
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +5,25 @@ do arquivo enviado anteriormente pelo usuário DICA: atributo download da tag <a
   <title>Download</title>
 </head>
 <body>
-  <a href="" download="">Download</a>
+
+
+  <?php
+    $filePath = __DIR__."/uploads/";
+    
+    // Escaneando o diretório. Retorna array com lista de arquivos na pasta:
+    $fileArray = scandir($filePath);
+
+    foreach ($fileArray as $imgFile) {
+      // Para pegar apenas arquivos de imagem e criar ancoras de download:
+      if(substr($imgFile,-3)=="png" || substr($imgFile,-3)=="jpg" || substr($imgFile,-4)=="jpeg"){ ?>
+        <a href="<?= $filePath.$imgFile ?>" download><?= $imgFile ?><br></a>
+      <?php }
+    }
+  ?>
+    
+    <!-- OBS: A parte da ancora poderia ter escrito assim, sem precisar abrir e fechar tags de php: 
+         echo "<a href='uploads/".$file."' download>".$file."<br></a>"; -->
+
 </body>
 </html>
 
