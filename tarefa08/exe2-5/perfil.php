@@ -1,16 +1,29 @@
 
-permite ​ editar e excluir
-
 <?php
 
 $users = json_decode(file_get_contents(__DIR__."/usuarios.json"),true); 
 
-$userProfile = $_GET[$id];
+var_dump($_GET);
 
-var_dump($userProfile);
-
-
-
+foreach ($users as $user) {
+  if($_GET['idUsuario'] = $user['id']){
+    echo $user['userName'];
+  }
+ 
+}
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,3 +1,8 @@
+<!-- 
+ARRUMAR: 
+1- primeiro arquivo incluido. O arquivo existe, mas não está vazio, está dando o erro: Warning: count(): Parameter must be an array or an object that implements Countable in /opt/lampp/htdocs/php-tarefas/tarefa08/exe2-5/cadastroUsuarios.php on line 21
+ -->
+
 <?php
 
   $users = json_decode(file_get_contents(__DIR__."/usuarios.json"),true); 
@@ -6,18 +11,19 @@
     $fileName = "usuarios.json";
 
     //Se já existir arquivo .json:
-    if(file_exists($fileName)){
+    if(file_exists($fileName) && $fileName != []){
    
       //Criar restrição para se não houver texto dentro do file_get_contents:
       $users = json_decode(file_get_contents($fileName),true);
 
       //Colocando ID para marcação do cadastro usuário:
-      //Pegando último ID:
+      //Pegando posição na array do último ID:
       $idLastPosition = count($users)-1; 
-      //Somando um valor ao último ID:
+      //Somando um valor ao último ID para acrescentar na array de usuários:
       $idLast = $users[$idLastPosition]["id"]+1;
 
-      $users[] = ["id" => $idLast, "userName" => $name, "userAge" => $age, "userImage" => $img, "userCV" => $cv];
+      //GAMBIARRA: inseri na array o número do ID como string para comparar com o _GET do perfil.php
+      $users[] = ["id" => "$idLast", "userName" => $name, "userAge" => $age, "userImage" => $img, "userCV" => $cv];
 
       $json = json_encode($users);
 
@@ -29,7 +35,7 @@
         return "Houve um problema ao adicionar o usuário";
       }
 
-    //Se ainda não existir arquivo .json, cria:
+    //Se ainda não existir arquivo .json, ou estiver vazio, cria:
     }else {
       $idLast = 1;
 
@@ -127,22 +133,19 @@
             </tr>
             <?php foreach($users as $row){ ?>
             <tr>
-              <td><?= $row["id"]; ?></td>
-              <td><?= $row["userName"]; ?></td>
-              <td><?= $row["userAge"]; ?></td>
-              <td><?= $row["userImage"]; ?></td>
-              <td><?= $row["userCV"]; ?></td>
-              <td><a href="perfil.php?<?php $row["id"]; ?> ">Ver Perfil</a></td>
+              <td><?= $row['id']; ?></td>
+              <td><?= $row['userName']; ?></td>
+              <td><?= $row['userAge']; ?></td>
+              <td><?= $row['userImage']; ?></td>
+              <td><?= $row['userCV']; ?></td>
+              <!-- Aqui cria um botão para ir para a página específica de cada usuário: -->
+              <td><a href="perfil.php?idUsuario=<?= $row['id']; ?>">Ver Perfil</a></td>
             </tr>
             <?php } ?>
           </table> 
         <?php } ?>
       </div>
     </section>
-
-
-
-
-</main>
+  </main>
 </body>
 </html>
