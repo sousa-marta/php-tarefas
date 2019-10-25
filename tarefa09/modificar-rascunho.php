@@ -24,7 +24,7 @@
 </html>
 
 
-<script type="text/javascript">
+<?php
 
   function incrementar(){
     session_start();
@@ -37,4 +37,5 @@
     $_SESSION["contador"] = 0;
     echo "O contador foi zerado.";
   }
-</script>
+  
+?>

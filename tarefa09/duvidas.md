@@ -1,0 +1,1 @@
+Tem como resolver exe 1 sem JS?
